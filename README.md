@@ -14,8 +14,10 @@ A collection of my personal dotfiles for Arch Linux, using **i3**, **zsh**, and 
 Clone the repository and copy the configs:
 ```bash
 git clone https://github.com/ahasarthak/Personal-Dotfiles.git
-cd dotfiles
-cp -r rofi alacritty gtk-2.0 i3 i3status picom ~/.config/ && cd
+cd Personal-Dotfiles
+cp -r rofi alacritty gtk-2.0 i3 i3status picom ~/.config/ && cd ~/Personal-Dots
+mv zshrc .zshrc
+mv tmux.conf .tmux.conf
 cp .zshrc .tmux.conf ~/
 ```
 
