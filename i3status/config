@@ -6,9 +6,48 @@ general {
 	color_bad = "#be2422"
 }
 
+order += "disk /"
+order += "cpu_usage"
+order += "memory"
+order += "battery all"
+order += "volume master"
 order += "time"
 
+disk "/" {
+    format = "  ahasarthak "
+}
+
+cpu_usage {
+    format = " [cpu] %usage "
+}
+
+memory {
+    format = " [ram] %used "
+}
+
+battery all {
+    format = " %status %percentage "
+        format_down = "No battery"
+        last_full_capacity = true
+        integer_battery_capacity = true
+        status_chr = ""
+        status_bat = "[bat]"
+        status_unk = ""
+        status_full = ""
+        low_threshold = 20
+        threshold_type = time
+}
+
+volume master {
+    format = " [vol] %volume "
+    format_muted = " ﱝ "
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
+
+
 time {
-	format = "%Y-%m-%d %H:%M:%S"
+	format = "[date] %d-%m-%Y [clock] %I:%M:%S %p]"
 }
 
